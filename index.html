@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"  href="./images/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" media="all" href="./base.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
+    <title>Project Planner</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Project planner</h1>
+        <div class="clock">
+            <div id="date"></div><br>
+            <div id="time"></div>
+        </div>
+    </div>
+    <div class="container">
+		<form id="taskForm">
+			<input type="text" id="name" placeholder="Task Name" required>
+			<input type="text" id="description" placeholder="Task Description" required>
+			<input type="date" id="deadline" placeholder="Deadline" required>
+			<select id="status">
+				<option value="to do">To Do</option>
+				<option value="doing">Doing</option>
+				<option value="done">Done</option>
+			</select>
+			<button type="submit">Add Task</button>
+		</form>
+		<div class="filters">
+			<label for="filter">Filter by Status:</label>
+			<select id="filter">
+				<option value="all">All</option>
+				<option value="to do">To Do</option>
+				<option value="doing">Doing</option>
+				<option value="done">Done</option>
+			</select>
+		</div>
+		<table id="tasks">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Deadline</th>
+					<th>Status</th>
+					<th>Remaining Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--  tasks will be  genered here -->
+			</tbody>
+		</table>
+	</div>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>

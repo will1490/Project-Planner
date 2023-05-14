@@ -7,6 +7,13 @@
     <link rel="shortcut icon"  href="./images/favicon-16x16.png">
     <link rel="stylesheet" type="text/css" media="all" href="./base.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
+	
+	<script type="module" defer src="./display.js"></script>
+	<script type="module" defer src="./dateAndClock.js"></script>
+	<script type="module" defer src="./deadline.js"></script>
+	<script type="module" defer src="./script.js"></script>
+	<script type="module" defer src="./addTask.js"></script>
+
     <title>Project Planner</title>
 </head>
 <body>
@@ -37,8 +44,11 @@
 				<option value="doing">Doing</option>
 				<option value="done">Done</option>
 			</select>
+			<label for="name-filter">Filter by Name:</label>
+			<input type="text" id="name-filter" placeholder="Enter task name">
+
 		</div>
-		<table id="tasks">
+		<table id="tasks-items">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -48,13 +58,10 @@
 					<th>Remaining Time</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="tasks">
 				<!--  tasks will be  genered here -->
 			</tbody>
 		</table>
 	</div>
-
-    
-    <script src="./script.js"></script>
 </body>
 </html>

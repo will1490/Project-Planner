@@ -17,19 +17,19 @@ tr:hover {
 input[type="text"] {
     padding: 8px;
     border-radius: 4px;
-    border: none;
+    border: solid 1px;
     margin-right: 10px;
     width: 75%;
 }
 input[type="date"] {
     padding: 8px;
     border-radius: 4px;
-    border: none;
+    border: solid 1px;
     margin-right: 10px;
     width: 23%;
 }
 button {
-    background-color: #008CBA;
+    background-color: green;
     color: white;
     border-radius: 4px;
     border: none;
@@ -39,7 +39,7 @@ button {
     width: 100px;
 }
 button:hover {
-    background-color: #006B95;
+    background-color: red;
 }
 .container {
     margin-top: 50px;

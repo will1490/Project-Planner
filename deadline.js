@@ -4,5 +4,6 @@ export function getRemainingTime(deadline) {
     const limit = new Date(deadline);
     const timeDiff = limit.getTime() - today.getTime();
     const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    
     return daysRemaining;
   }

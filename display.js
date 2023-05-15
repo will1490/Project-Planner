@@ -8,12 +8,11 @@ export function displayTasks() {
   const nameFilterInput = document.querySelector('#name-filter');
 
   taskTable.innerHTML = '';
-
   let filteredTasks = tasks;
 
   if (!Array.isArray(filteredTasks)) {
     filteredTasks = []; // Check filteredTasks is an Array
-  }
+   }
 
   if (filterSelect.value !== 'all') {
     filteredTasks = filteredTasks.filter(task => task.status === filterSelect.value);
@@ -23,7 +22,6 @@ export function displayTasks() {
     const searchValue = nameFilterInput.value.trim().toLowerCase();
     filteredTasks = filteredTasks.filter(task => task.name.toLowerCase().includes(searchValue));
   }
-  
   filteredTasks.forEach(task => {
 
     const row = document.createElement('tr');
@@ -52,4 +50,4 @@ export function displayTasks() {
 
     taskTable.appendChild(row);
   });
-}
+};
